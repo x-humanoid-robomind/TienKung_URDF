@@ -51,8 +51,8 @@ TienKung_URDF （项目根目录）
 
 适用于开发、调试、二次开发和硬件维护。
 
-天工Lite结构图纸： [Lite结构图纸](https://x-humanoid.com/download/TG10-00%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E8%A3%85%E4%BD%93.STEP)
+天工Lite结构图纸下载： [Lite结构图纸](https://x-humanoid.com/download/TG10-00%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E8%A3%85%E4%BD%93.STEP)
 
-天工Pro结构图纸：[Pro结构图纸](https://x-humanoid.com/download/TG11-00%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E8%A3%85%E4%BD%93.STEP)
+天工Pro结构图纸下载：[Pro结构图纸](https://x-humanoid.com/download/TG11-00%20%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%80%BB%E8%A3%85%E4%BD%93.STEP)
 
 ---
