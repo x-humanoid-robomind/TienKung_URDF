@@ -1,0 +1,675 @@
+<?xml version="1.0"?>
+<robot name="tianyi2.0_complete" xmlns:xacro="http://wiki.ros.org/xacro">
+
+  <xacro:include filename="$(find tianyi2_urdf)/urdf/tianyi2.0_URDF.urdf.xacro" />
+ 
+
+  <xacro:macro name="install_left_hand" params="parent:='left_tcp_link' xyz:='0 0 0' rpy:='0 0 0'">
+    <link name="L_base_link">
+      <inertial>
+        <origin xyz="0.00125804982596889 0.00181115978340497 0.069441813384378" rpy="0 0 0" />
+        <mass value="0.38756" />
+        <inertia ixx="0.00059831308" ixy="-5.60829e-06" ixz="-2.8701399999999997e-06" iyy="0.00050077156" iyz="-3.4830999999999997e-06" izz="0.00018467082" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL" /></geometry>
+      </collision>
+    </link>
+
+    <!-- 左手拇指1：left_thumb_1 -->
+    <link name="left_thumb_1">
+      <inertial>
+        <origin xyz="0.000853471678482959 -0.00482215750222577 -0.0048200002860689" rpy="0 0 0" />
+        <mass value="0.00483" />
+        <inertia ixx="1.9502e-07" ixy="3.536e-08" ixz="3.1e-09" iyy="1.4336e-07" iyz="7.9e-09" izz="1.6891e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_thumb_1_joint" type="revolute">
+      <origin xyz="0.01696 -0.02045 0.06635" rpy="0 0 0" />
+      <parent link="L_base_link" />
+      <child link="left_thumb_1" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="1.246165" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手拇指2：left_thumb_2 -->
+    <link name="left_thumb_2">
+      <inertial>
+        <origin xyz="-0.0194665821577184 0.0163039156062457 -0.00803846870341951" rpy="0 0 0" />
+        <mass value="0.05759" />
+        <inertia ixx="1.0666209999999999e-05" ixy="4.413609999999999e-06" ixz="5.150000000000001e-09" iyy="8.92353e-06" iyz="-2.59e-09" izz="1.700133e-05" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_thumb_2_joint" type="revolute">
+      <origin xyz="0.010735 -0.0090002 -0.0065" rpy="1.5708 0 1.8361" />
+      <parent link="left_thumb_1" />
+      <child link="left_thumb_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="0.48" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手拇指3：left_thumb_3 -->
+    <link name="left_thumb_3">
+      <inertial>
+        <origin xyz="-0.009466620350846 0.00207562096651074 -0.00719989129239992" rpy="0 0 0" />
+        <mass value="0.00985" />
+        <inertia ixx="1.21069e-06" ixy="1.0767e-07" ixz="1.0000000000000001e-11" iyy="6.011799999999999e-07" iyz="3e-11" izz="1.28966e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_thumb_3_joint" type="revolute">
+      <origin xyz="-0.037617 0.041486 -0.0008" rpy="0 0 0" />
+      <parent link="left_thumb_2" />
+      <child link="left_thumb_3" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="0.3578" effort="50" velocity="1" />
+      <mimic joint="left_thumb_2_joint" multiplier="1.1425" offset="0" />
+    </joint>
+
+    <!-- 左手拇指4：left_thumb_4 -->
+    <link name="left_thumb_4">
+      <inertial>
+        <origin xyz="-0.00604903882220686 0.00861521192699925 -0.00600331217685268" rpy="0 0 0" />
+        <mass value="0.00552" />
+        <inertia ixx="3.1668e-07" ixy="4.536e-08" ixz="-1.0000000000000001e-11" iyy="1.2999000000000001e-07" iyz="-4e-10" izz="3.3747e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_thumb_4_joint" type="revolute">
+      <origin xyz="-0.014957 0.017012 -0.0012" rpy="0 0 0" />
+      <parent link="left_thumb_3" />
+      <child link="left_thumb_4" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="0.2775" effort="50" velocity="1" />
+      <mimic joint="left_thumb_3_joint" multiplier="0.7508" offset="0" />
+    </joint>
+
+    <!-- 左手食指1：left_index_1 -->
+    <link name="left_index_1">
+      <inertial>
+        <origin xyz="0.0008527159848849 0.0119736084448001 0.00599989169039383" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.93998e-06" ixy="1.5035e-07" ixz="4.1e-10" iyy="5.6245e-07" iyz="3.49e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_index_1_joint" type="revolute">
+      <origin xyz="-0.00028533 -0.020275 0.13695" rpy="1.6057 0 0" />
+      <parent link="L_base_link" />
+      <child link="left_index_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手食指2：left_index_2 -->
+    <link name="left_index_2">
+      <inertial>
+        <origin xyz="0.00408344708691732 0.0192601764486991 0.00500003100756935" rpy="0 0 0" />
+        <mass value="0.00633" />
+        <inertia ixx="9.4327e-07" ixy="3.8912e-07" ixz="2.0000000000000002e-11" iyy="2.897e-07" iyz="5e-11" izz="1.14024e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_index_2_joint" type="revolute">
+      <origin xyz="0.0080993 0.031095 0.001" rpy="0 0 0" />
+      <parent link="left_index_1" />
+      <child link="left_index_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="left_index_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 左手中指1：left_middle_1 -->
+    <link name="left_middle_1">
+      <inertial>
+        <origin xyz="0.00085287755691596 0.0119736405947354 0.00599988891959347" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.94e-06" ixy="1.5036e-07" ixz="9.899999999999999e-10" iyy="5.6248e-07" iyz="5.01e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_middle_1_joint" type="revolute">
+      <origin xyz="-0.00028533 -0.00095 0.1371" rpy="1.5708 0 0" />
+      <parent link="L_base_link" />
+      <child link="left_middle_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手中指2：left_middle_2 -->
+    <link name="left_middle_2">
+      <inertial>
+        <origin xyz="0.00471131608223271 0.0203464425452461 0.00500013550498847" rpy="0 0 0" />
+        <mass value="0.00681" />
+        <inertia ixx="1.18348e-06" ixy="5.0397e-07" ixz="0.0" iyy="3.558e-07" iyz="0.0" izz="1.43878e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_middle_2_joint" type="revolute">
+      <origin xyz="0.0080996 0.031095 0.001" rpy="0 0 0" />
+      <parent link="left_middle_1" />
+      <child link="left_middle_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="left_middle_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 左手无名指1：left_ring_1 -->
+    <link name="left_ring_1">
+      <inertial>
+        <origin xyz="0.000852611292407851 0.0119736634067538 0.00599988335942421" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.93998e-06" ixy="1.5033e-07" ixz="5.1e-10" iyy="5.6244e-07" iyz="3.52e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_ring_1_joint" type="revolute">
+      <origin xyz="-0.00028533 0.018271 0.13628" rpy="1.5184 0 0" />
+      <parent link="L_base_link" />
+      <child link="left_ring_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手无名指2：left_ring_2 -->
+    <link name="left_ring_2">
+      <inertial>
+        <origin xyz="0.00408299506259779 0.0192602956948013 0.00500000332159135" rpy="0 0 0" />
+        <mass value="0.00633" />
+        <inertia ixx="6.4877680e-07" ixy="-2.6414408e-07" ixz="-8.90807474e-013" iyy="2.084188844e-07" iyz="-1.3837101e-12" izz="7.8180149e-07" />
+      </inertial>
+
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_ring_2_joint" type="revolute">
+      <origin xyz="0.0080989 0.031095 0.001" rpy="0 0 0" />
+      <parent link="left_ring_1" />
+      <child link="left_ring_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="left_ring_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 左手小指1：left_little_1 -->
+    <link name="left_little_1">
+      <inertial>
+        <origin xyz="0.000851752984712406 0.0119737230065286 0.00599988919520877" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.94e-06" ixy="1.5023e-07" ixz="3e-10" iyy="5.6242e-07" iyz="3.18e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_little_1_joint" type="revolute">
+      <origin xyz="-0.00028533 0.037422 0.13446" rpy="1.4661 0 0" />
+      <parent link="L_base_link" />
+      <child link="left_little_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 左手小指2：left_little_2 -->
+    <link name="left_little_2">
+      <inertial>
+        <origin xyz="0.00273890807896854 0.0161632709360688 0.00500586036971424" rpy="0 0 0" />
+        <mass value="0.00525" />
+        <inertia ixx="5.5787e-07" ixy="2.175e-07" ixz="0.0" iyy="1.8624e-07" iyz="0.0" izz="6.6906e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="left_little_2_joint" type="revolute">
+      <origin xyz="0.0080966 0.031096 0.001" rpy="0 0 0" />
+      <parent link="left_little_1" />
+      <child link="left_little_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="left_little_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 左手与主体的固定关节：连接L_base_link到left_tcp_link -->
+    <joint name="left_hand_to_tcp" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent}" />
+      <child link="L_base_link" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:macro name="install_right_hand" params="parent:='right_tcp_link' xyz:='0 0 0' rpy:='0 0 0'">
+    <!-- 右手根链接：R_base_link -->
+    <link name="R_base_link">
+      <inertial>
+        <origin xyz="0.00252515168164585 -0.001960054926157 0.0660467739648412" rpy="0 0 0" />
+        <mass value="0.38756" />
+        <inertia ixx="0.00059831308" ixy="5.60829e-06" ixz="2.8701399999999997e-06" iyy="0.00050077156" iyz="3.4830999999999997e-06" izz="0.00018467082" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL" /></geometry>
+      </collision>
+    </link>
+
+    <!-- 右手拇指1：right_thumb_1 -->
+    <link name="right_thumb_1">
+      <inertial>
+        <origin xyz="0.000853491366153925 0.00482216769884483 -0.00481999614705116" rpy="0 0 0" />
+        <mass value="0.00483" />
+        <inertia ixx="1.9502e-07" ixy="-3.536e-08" ixz="-3.1e-09" iyy="1.4336e-07" iyz="-7.9e-09" izz="1.6891e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_thumb_1_joint" type="revolute">
+      <origin xyz="0.01696 0.02045 0.06635" rpy="0 0 0" />
+      <parent link="R_base_link" />
+      <child link="right_thumb_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.246165" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 右手拇指2：right_thumb_2 -->
+    <link name="right_thumb_2">
+      <inertial>
+        <origin xyz="0.0194641293930403 0.0162980383727088 -0.00803857337744943" rpy="0 0 0" />
+        <mass value="0.05759" />
+        <inertia ixx="1.06662e-05" ixy="-4.4136e-06" ixz="-5.15e-09" iyy="8.92353e-06" iyz="2.59e-09" izz="1.700133e-05" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_thumb_2_joint" type="revolute">
+      <origin xyz="0.010735 0.0090002 -0.0065" rpy="1.5708 0 1.3055" />
+      <parent link="right_thumb_1" />
+      <child link="right_thumb_2" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.48" effort="50" velocity="1" />
+    </joint>
+
+
+    <link name="right_thumb_3">
+      <inertial>
+        <origin xyz="0.00946651884646355 0.00207630823866701 -0.00720000588824668" rpy="0 0 0" />
+        <mass value="0.00985" /> 
+        <inertia ixx="1.21069e-06" ixy="-1.0767e-07" ixz="-1e-11" iyy="6.0118e-07" iyz="-3e-11" izz="1.28966e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_thumb_3_joint" type="revolute">
+      <origin xyz="0.037617 0.041486 -0.0008" rpy="0 0 0" />
+      <parent link="right_thumb_2" />
+      <child link="right_thumb_3" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.3578" effort="50" velocity="1" />
+      <mimic joint="right_thumb_2_joint" multiplier="1.1425" offset="0" />
+    </joint>
+
+    <!-- 右手拇指4：right_thumb_4 -->
+    <link name="right_thumb_4">
+      <inertial>
+        <origin xyz="0.00604904909827651 0.00861522746372045 -0.00600329390500667" rpy="0 0 0" />
+        <mass value="0.00552" />
+        <inertia ixx="3.1668e-07" ixy="-4.536e-08" ixz="1e-11" iyy="1.2999e-07" iyz="4e-10" izz="3.3747e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_thumb_4_joint" type="revolute">
+      <origin xyz="0.014957 0.017012 -0.0012" rpy="0 0 0" />
+      <parent link="right_thumb_3" />
+      <child link="right_thumb_4" />
+      <axis xyz="0 0 1" />
+      <limit lower="0" upper="0.2775" effort="50" velocity="1" />
+      <mimic joint="right_thumb_3_joint" multiplier="0.7508" offset="0" />
+    </joint>
+
+    <!-- 右手食指1：right_index_1 -->
+    <link name="right_index_1">
+      <inertial>
+        <origin xyz="0.000852715296526529 0.0119735955318245 -0.00599986563267159" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.93998e-06" ixy="-1.5035e-07" ixz="-4.1e-10" iyy="5.6245e-07" iyz="-3.49e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_index_1_joint" type="revolute">
+      <origin xyz="-0.000285 0.020275 0.136946" rpy="1.5359 0 0" />
+      <parent link="R_base_link" />
+      <child link="right_index_1" />
+      <axis xyz="0 -0.069756  -0.997564" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 右手食指2：right_index_2 -->
+    <link name="right_index_2">
+      <inertial>
+        <origin xyz="0.00408342999190195 0.0192600939391442 -0.00500000380847467" rpy="0 0 0" />
+        <mass value="0.00633" />
+        <inertia ixx="9.4327e-07" ixy="-3.8912e-07" ixz="-2e-11" iyy="2.897e-07" iyz="-5e-11" izz="1.14024e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_index_2_joint" type="revolute">
+      <origin xyz="0.008099 0.031095 -0.001" rpy="0 0 0" />
+      <parent link="right_index_1" />
+      <child link="right_index_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="right_index_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 右手中指1：right_middle_1 -->
+    <link name="right_middle_1">
+      <inertial>
+        <origin xyz="0.000852855866232599 0.011973606798452 -0.00399984588006246" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.94e-06" ixy="-1.5036e-07" ixz="-9.9e-10" iyy="5.6248e-07" iyz="-5.01e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_middle_1_joint" type="revolute">
+      <origin xyz="-0.000285 0.00295 0.1371" rpy="1.5708 0 0" />
+      <parent link="R_base_link" />
+      <child link="right_middle_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 右手中指2：right_middle_2 -->
+    <link name="right_middle_2">
+      <inertial>
+        <origin xyz="0.0047113458880482 0.0203465768773643 -0.00500003269708214" rpy="0 0 0" />
+        <mass value="0.00681" />
+        <inertia ixx="1.18348e-06" ixy="-5.0397e-07" ixz="0.0" iyy="3.558e-07" iyz="0.0" izz="1.43878e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_middle_2_joint" type="revolute">
+      <origin xyz="0.0081 0.031095 0.001" rpy="0 0 0" />
+      <parent link="right_middle_1" />
+      <child link="right_middle_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="right_middle_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 右手无名指1：right_ring_1 -->
+    <link name="right_ring_1">
+      <inertial>
+        <origin xyz="0.00085245845917839 0.0119734648811593 -0.00599989251266642" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.93998e-06" ixy="-1.5033e-07" ixz="-5.1e-10" iyy="5.6244e-07" iyz="-3.52e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_ring_1_joint" type="revolute">
+      <origin xyz="-0.000285 -0.018271 0.136282" rpy="1.6232 0 0" />
+      <parent link="R_base_link" />
+      <child link="right_ring_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 右手无名指2：right_ring_2 -->
+    <link name="right_ring_2">
+      <inertial>
+        <origin xyz="0.00408287363348225 0.0192599767415159 -0.00499998343104271" rpy="0 0 0" />
+        <mass value="0.00633" />
+        <inertia ixx="9.4329e-07" ixy="-3.8762e-07" ixz="-3.394e-08" iyy="2.9615e-07" iyz="-7.389e-08" izz="1.13377e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_ring_2_joint" type="revolute">
+      <origin xyz="0.008099 0.031095 -0.001" rpy="0 0 0" />
+      <parent link="right_ring_1" />
+      <child link="right_ring_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="right_ring_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <!-- 右手小指1：right_little_1 -->
+    <link name="right_little_1">
+      <inertial>
+        <origin xyz="0.000851610973032574 0.0119735303202265 -0.00599989467442243" rpy="0 0 0" />
+        <mass value="0.01229" />
+        <inertia ixx="1.94e-06" ixy="-1.5023e-07" ixz="-3e-10" iyy="5.6242e-07" iyz="-3.18e-09" izz="2.05872e-06" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_little_1_joint" type="revolute">
+      <origin xyz="-0.000285 -0.037422 0.13446" rpy="1.6755 0 0" />
+      <parent link="R_base_link" />
+      <child link="right_little_1" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.333" effort="50" velocity="1" />
+    </joint>
+
+    <!-- 右手小指2：right_little_2 -->
+    <link name="right_little_2">
+      <inertial>
+        <origin xyz="0.00273929963119374 0.0161600317264199 -0.00499667765900381" rpy="0 0 0" />
+        <mass value="0.00525" />
+        <inertia ixx="5.5787e-07" ixy="-2.175e-07" ixz="0.0" iyy="1.8624e-07" iyz="0.0" izz="6.6906e-07" />
+      </inertial>
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL" /></geometry>
+        <material name=""><color rgba="1 1 1 1" /></material>
+      </visual>
+      <collision>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL" /></geometry>
+      </collision>
+    </link>
+    <joint name="right_little_2_joint" type="revolute">
+      <origin xyz="0.008097 0.031096 -0.001" rpy="0 0 0" />
+      <parent link="right_little_1" />
+      <child link="right_little_2" />
+      <axis xyz="0 0 -1" />
+      <limit lower="0" upper="1.527" effort="50" velocity="1" />
+      <mimic joint="right_little_1_joint" multiplier="1.1169" offset="0" />
+    </joint>
+
+    <joint name="right_hand_to_tcp" type="fixed">
+      <origin xyz="${xyz}" rpy="${rpy}" />
+      <parent link="${parent}" />
+      <child link="R_base_link" />
+    </joint>
+  </xacro:macro>
+
+  <xacro:install_left_hand parent="left_tcp_link" xyz="0 0 0" rpy="3.14 0 0" />
+  <xacro:install_right_hand parent="right_tcp_link" xyz="0 0 0" rpy="3.14 0 0" />
+
+</robot>

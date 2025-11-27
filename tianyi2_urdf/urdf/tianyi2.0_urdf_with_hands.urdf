@@ -13,7 +13,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/base.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/base.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -22,7 +22,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/base.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/base.STL"/>
       </geometry>
     </collision>
   </link>
@@ -35,7 +35,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/first_leg_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/first_leg_pitch_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -44,7 +44,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/first_leg_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/first_leg_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -64,7 +64,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/second_leg_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/second_leg_pitch_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -73,7 +73,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/second_leg_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/second_leg_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -93,7 +93,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/waist_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/waist_pitch_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -102,7 +102,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/waist_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/waist_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -122,7 +122,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/body_yaw_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/body_yaw_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -131,7 +131,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/body_yaw_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/body_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -151,7 +151,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_yaw_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_yaw_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -160,7 +160,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_yaw_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_yaw_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -180,7 +180,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_pitch_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -189,7 +189,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_pitch_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_pitch_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -209,7 +209,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_roll_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_roll_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -218,7 +218,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/head_roll_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/head_roll_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -238,7 +238,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/camera_head_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/camera_head_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -247,7 +247,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/camera_head_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/camera_head_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -266,7 +266,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -275,7 +275,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -295,7 +295,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_roll_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -304,7 +304,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_roll_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -324,7 +324,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_yaw_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -333,7 +333,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_yaw_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -353,7 +353,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -362,7 +362,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -382,7 +382,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_yaw_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -391,7 +391,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_yaw_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -411,7 +411,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -420,7 +420,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_pitch_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -440,7 +440,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_roll_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_l_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -449,7 +449,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_roll_l_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_l_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -469,7 +469,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_tcp_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_tcp_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -478,7 +478,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_tcp_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_tcp_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -497,7 +497,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -506,7 +506,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -526,7 +526,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_roll_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -535,7 +535,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_roll_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -555,7 +555,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_yaw_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -564,7 +564,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/shoulder_yaw_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -584,7 +584,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -593,7 +593,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -613,7 +613,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_yaw_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -622,7 +622,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/elbow_yaw_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -642,7 +642,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -651,7 +651,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_pitch_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -671,7 +671,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_roll_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_r_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -680,7 +680,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/wrist_roll_r_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_r_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -700,7 +700,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_tcp_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_tcp_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1"/>
@@ -709,7 +709,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_tcp_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_tcp_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -728,7 +728,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/L_base_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -737,7 +737,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/L_base_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -751,7 +751,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -760,7 +760,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -781,7 +781,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -790,7 +790,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -811,7 +811,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_3.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -820,7 +820,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_3.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL"/>
       </geometry>
     </collision>
   </link>
@@ -842,7 +842,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_4.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -851,7 +851,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_thumb_4.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL"/>
       </geometry>
     </collision>
   </link>
@@ -873,7 +873,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_index_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -882,7 +882,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_index_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -903,7 +903,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_index_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -912,7 +912,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_index_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -934,7 +934,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_middle_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -943,7 +943,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_middle_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -964,7 +964,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_middle_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -973,7 +973,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_middle_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -995,7 +995,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_ring_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1004,7 +1004,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_ring_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1025,7 +1025,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_ring_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1034,7 +1034,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_ring_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1056,7 +1056,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_little_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1065,7 +1065,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_little_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1086,7 +1086,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_little_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1095,7 +1095,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/left_little_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1123,7 +1123,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/R_base_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1132,7 +1132,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/R_base_link.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1146,7 +1146,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1155,7 +1155,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1176,7 +1176,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1185,7 +1185,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1205,7 +1205,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_3.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1214,7 +1214,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_3.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1236,7 +1236,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_4.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1245,7 +1245,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_thumb_4.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1267,7 +1267,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_index_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1276,7 +1276,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_index_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1297,7 +1297,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_index_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1306,7 +1306,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_index_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1328,7 +1328,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_middle_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1337,7 +1337,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_middle_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1358,7 +1358,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_middle_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1367,7 +1367,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_middle_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1389,7 +1389,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_ring_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1398,7 +1398,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_ring_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1419,7 +1419,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_ring_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1428,7 +1428,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_ring_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1450,7 +1450,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_little_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1459,7 +1459,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_little_1.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL"/>
       </geometry>
     </collision>
   </link>
@@ -1480,7 +1480,7 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_little_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL"/>
       </geometry>
       <material name="">
         <color rgba="1 1 1 1"/>
@@ -1489,7 +1489,7 @@
     <collision>
       <origin rpy="0 0 0" xyz="0 0 0"/>
       <geometry>
-        <mesh filename="package://tianyi2-urdf/meshes/right_little_2.STL"/>
+        <mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL"/>
       </geometry>
     </collision>
   </link>
