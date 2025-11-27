@@ -1109,7 +1109,7 @@
   </joint>
   <!-- 左手与主体的固定关节：连接L_base_link到left_tcp_link -->
   <joint name="left_hand_to_tcp" type="fixed">
-    <origin rpy="3.14 0 0" xyz="0 0 0"/>
+    <origin rpy="3.14 0 -1.570796" xyz="0 0 0"/>
     <parent link="left_tcp_link"/>
     <child link="L_base_link"/>
   </joint>
@@ -1502,7 +1502,7 @@
     <mimic joint="right_little_1_joint" multiplier="1.1169" offset="0"/>
   </joint>
   <joint name="right_hand_to_tcp" type="fixed">
-    <origin rpy="3.14 0 0" xyz="0 0 0"/>
+    <origin rpy="3.14 0 1.570796" xyz="0 0 0"/>
     <parent link="right_tcp_link"/>
     <child link="R_base_link"/>
   </joint>

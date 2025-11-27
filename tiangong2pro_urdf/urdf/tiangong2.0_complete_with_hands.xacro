@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<robot name="tianyi2.0_complete" xmlns:xacro="http://wiki.ros.org/xacro">
+<robot name="tiangong2pro_urdf_with_hands" xmlns:xacro="http://wiki.ros.org/xacro">
 
-  <xacro:include filename="$(find tianyi2_urdf)/urdf/tianyi2.0_URDF.urdf.xacro" />
+  <xacro:include filename="$(find tiangong2pro_urdf)/urdf/tiangong2.0_pro_urdf.urdf.xacro" />
  
 
   <xacro:macro name="install_left_hand" params="parent:='left_tcp_link' xyz:='0 0 0' rpy:='0 0 0'">
@@ -13,12 +13,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/L_base_link.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/L_base_link.STL" /></geometry>
       </collision>
     </link>
 
@@ -31,12 +31,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_1_joint" type="revolute">
@@ -56,12 +56,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_2_joint" type="revolute">
@@ -81,12 +81,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_3.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_3.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_3_joint" type="revolute">
@@ -107,12 +107,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_4.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_thumb_4.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_4_joint" type="revolute">
@@ -133,12 +133,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_index_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_index_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_index_1_joint" type="revolute">
@@ -158,12 +158,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_index_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_index_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_index_2_joint" type="revolute">
@@ -184,12 +184,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_middle_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_middle_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_middle_1_joint" type="revolute">
@@ -209,12 +209,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_middle_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_middle_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_middle_2_joint" type="revolute">
@@ -235,12 +235,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_ring_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_ring_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_ring_1_joint" type="revolute">
@@ -258,15 +258,14 @@
         <mass value="0.00633" />
         <inertia ixx="6.4877680e-07" ixy="-2.6414408e-07" ixz="-8.90807474e-013" iyy="2.084188844e-07" iyz="-1.3837101e-12" izz="7.8180149e-07" />
       </inertial>
-
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_ring_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_ring_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_ring_2_joint" type="revolute">
@@ -287,12 +286,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_little_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_little_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_little_1_joint" type="revolute">
@@ -312,12 +311,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_little_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/left_little_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_little_2_joint" type="revolute">
@@ -347,12 +346,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/R_base_link.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/R_base_link.STL" /></geometry>
       </collision>
     </link>
 
@@ -365,12 +364,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_1_joint" type="revolute">
@@ -390,12 +389,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_2_joint" type="revolute">
@@ -415,12 +414,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_3.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_3.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_3_joint" type="revolute">
@@ -441,12 +440,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_4.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_thumb_4.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_4_joint" type="revolute">
@@ -467,12 +466,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_index_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_index_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_index_1_joint" type="revolute">
@@ -492,12 +491,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_index_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_index_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_index_2_joint" type="revolute">
@@ -518,12 +517,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_middle_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_middle_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_middle_1_joint" type="revolute">
@@ -543,12 +542,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_middle_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_middle_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_middle_2_joint" type="revolute">
@@ -569,12 +568,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_ring_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_ring_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_ring_1_joint" type="revolute">
@@ -594,12 +593,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_ring_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_ring_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_ring_2_joint" type="revolute">
@@ -620,12 +619,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_little_1.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_little_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_little_1_joint" type="revolute">
@@ -645,12 +644,12 @@
       </inertial>
       <visual>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_little_2.STL" /></geometry>
         <material name=""><color rgba="1 1 1 1" /></material>
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tiangong2pro_urdf/meshes/right_little_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_little_2_joint" type="revolute">
