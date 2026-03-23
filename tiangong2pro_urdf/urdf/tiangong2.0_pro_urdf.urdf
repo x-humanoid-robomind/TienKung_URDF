@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<robot name="tiangong2pro_urdf">
+<robot name="tiangong2pro_urdf" xmlns:xacro="http://wiki.ros.org/xacro">
   <link name="pelvis">
     <inertial>
       <origin xyz="-0.000979 0.00068 -0.076922" rpy="0 0 0" />
@@ -11,7 +11,7 @@
       <geometry>
         <mesh filename="package://tiangong2pro_urdf/meshes/pelvis.STL" />
       </geometry>
-      <material name="">
+      <material name="pelvis_material">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
       </material>
     </visual>
@@ -370,7 +370,7 @@
     <axis xyz="1 0 0" />
     <limit lower="-0.5235987755982988" upper="0.5235987755982988" effort="55.0" velocity="14.137166941154069" />
   </joint>
-  <link name="body_yaw_link">
+  <link name="waist_yaw_link">
     <inertial>
       <origin xyz="-0.000568 0.00056 0.231488" rpy="0 0 0" />
       <mass value="22.0" />
@@ -379,7 +379,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tiangong2pro_urdf/meshes/body_yaw_link.STL" />
+        <mesh filename="package://tiangong2pro_urdf/meshes/waist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -388,14 +388,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tiangong2pro_urdf/meshes/body_yaw_link.STL" />
+        <mesh filename="package://tiangong2pro_urdf/meshes/waist_yaw_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="body_yaw_joint" type="revolute">
     <origin xyz="0 0 0" rpy="0 0 0" />
     <parent link="pelvis" />
-    <child link="body_yaw_link" />
+    <child link="waist_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.9670597283903604" upper="3.141592653589793" effort="91.0" velocity="9.215338450530059" />
   </joint>
@@ -423,7 +423,7 @@
   </link>
   <joint name="head_yaw_joint" type="revolute">
     <origin xyz="-0.002 0 0.56508" rpy="0 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="head_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="6.3" velocity="7.5398223686155035" />
@@ -538,7 +538,7 @@
   </link>
   <joint name="shoulder_pitch_l_joint" type="revolute">
     <origin xyz="0 0.1444 0.37712" rpy="0.087266 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="shoulder_pitch_l_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="91.0" velocity="9.215338450530059" />
@@ -570,7 +570,7 @@
     <parent link="shoulder_pitch_l_link" />
     <child link="shoulder_roll_l_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.0471975511965976" upper="1.8325957145940461" effort="95.0" velocity="3.979350694547071" />
+    <limit lower="-0.2617993877991494" upper="2.6179938779914944" effort="95.0" velocity="3.979350694547071" />
   </joint>
   <link name="shoulder_yaw_l_link">
     <inertial>
@@ -686,7 +686,7 @@
     <parent link="elbow_yaw_l_link" />
     <child link="wrist_pitch_l_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="wrist_roll_l_link">
     <inertial>
@@ -715,7 +715,7 @@
     <parent link="wrist_pitch_l_link" />
     <child link="wrist_roll_l_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.0471975511965976" upper="0.7853981633974483" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-1.6580627893946132" upper="1.3089969389957472" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="left_tcp_link">
     <inertial>
@@ -769,7 +769,7 @@
   </link>
   <joint name="shoulder_pitch_r_joint" type="revolute">
     <origin xyz="0 -0.1444 0.37712" rpy="-0.087266 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="shoulder_pitch_r_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="91.0" velocity="9.215338450530059" />
@@ -801,7 +801,7 @@
     <parent link="shoulder_pitch_r_link" />
     <child link="shoulder_roll_r_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.8325957145940461" upper="1.0471975511965976" effort="95.0" velocity="3.979350694547071" />
+    <limit lower="-2.6179938779914944" upper="0.2617993877991494" effort="95.0" velocity="3.979350694547071" />
   </joint>
   <link name="shoulder_yaw_r_link">
     <inertial>
@@ -917,7 +917,7 @@
     <parent link="elbow_yaw_r_link" />
     <child link="wrist_pitch_r_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="wrist_roll_r_link">
     <inertial>
@@ -946,7 +946,7 @@
     <parent link="wrist_pitch_r_link" />
     <child link="wrist_roll_r_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="right_tcp_link">
     <inertial>
@@ -1000,7 +1000,7 @@
   </link>
   <joint name="camera_body_front_joint" type="fixed">
     <origin xyz="0.090583 0.02375 0.039012" rpy="-2.1468 0 -1.5708" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="camera_body_front_link" />
     <axis xyz="0 0 0" />
   </joint>
@@ -1028,7 +1028,7 @@
   </link>
   <joint name="camera_body_back_joint" type="fixed">
     <origin xyz="-0.11363 0.02375 0.2746" rpy="2.0071 0 -1.5708" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="camera_body_back_link" />
     <axis xyz="0 0 0" />
   </joint>

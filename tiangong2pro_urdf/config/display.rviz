@@ -86,7 +86,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        body_yaw_link:
+        waist_yaw_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -271,7 +271,7 @@ Visualization Manager:
           Value: true
         ankle_roll_r_link:
           Value: true
-        body_yaw_link:
+        waist_yaw_link:
           Value: true
         camera_body_back_link:
           Value: true
@@ -344,7 +344,7 @@ Visualization Manager:
       Show Names: false
       Tree:
         pelvis:
-          body_yaw_link:
+          waist_yaw_link:
             camera_body_back_link:
               {}
             camera_body_front_link:
