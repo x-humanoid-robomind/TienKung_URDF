@@ -1,0 +1,460 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="servoarm">
+  <link name="base">
+    <inertial>
+      <origin xyz="-3e-06 0.0 0.012053" rpy="0 0 0" />
+      <mass value="0.523832" />
+      <inertia ixx="0.000433" ixy="0.0" ixz="0.0" iyy="0.000433" iyz="0.0" izz="0.000771" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/base.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link name="waist_yaw_link">
+    <inertial>
+      <origin xyz="-0.001664 0.001612 0.08713" rpy="0 0 0" />
+      <mass value="0.530226" />
+      <inertia ixx="0.002854" ixy="-2e-06" ixz="7e-06" iyy="0.001864" iyz="6.3e-05" izz="0.001481" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/waist_yaw_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/waist_yaw_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="waist_yaw_joint" type="revolute">
+    <origin xyz="0 0 0.036" rpy="0 0 0" />
+    <parent link="base" />
+    <child link="waist_yaw_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-6.283185307179586" upper="6.283185307179586" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_pitch_l_link">
+    <inertial>
+      <origin xyz="-0.000303 0.040626 -0.000143" rpy="0 0 0" />
+      <mass value="0.11577" />
+      <inertia ixx="4.8e-05" ixy="0.0" ixz="0.0" iyy="2.8e-05" iyz="0.0" izz="4.9e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_pitch_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_pitch_l_joint" type="revolute">
+    <origin xyz="0 0.076852 0.13628" rpy="0.087266 0 0" />
+    <parent link="waist_yaw_link" />
+    <child link="shoulder_pitch_l_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_roll_l_link">
+    <inertial>
+      <origin xyz="-0.001998 2e-06 -0.040453" rpy="0 0 0" />
+      <mass value="0.081127" />
+      <inertia ixx="7.3e-05" ixy="0.0" ixz="-3e-06" iyy="9.5e-05" iyz="0.0" izz="4.7e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_roll_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_roll_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_roll_l_joint" type="revolute">
+    <origin xyz="0 0.0545 0" rpy="-0.087266 0 0" />
+    <parent link="shoulder_pitch_l_link" />
+    <child link="shoulder_roll_l_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-0.2617993877991494" upper="2.6179938779914944" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_yaw_l_link">
+    <inertial>
+      <origin xyz="0.00623 -8.1e-05 -0.057357" rpy="0 0 0" />
+      <mass value="0.056269" />
+      <inertia ixx="4.9e-05" ixy="0.0" ixz="9e-06" iyy="5.3e-05" iyz="0.0" izz="1.9e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_yaw_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_yaw_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_yaw_l_joint" type="revolute">
+    <origin xyz="0 0 -0.07" rpy="0 0 0" />
+    <parent link="shoulder_roll_l_link" />
+    <child link="shoulder_yaw_l_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="elbow_pitch_l_link">
+    <inertial>
+      <origin xyz="-0.018216 -7e-06 -0.032379" rpy="0 0 0" />
+      <mass value="0.059756" />
+      <inertia ixx="3.7e-05" ixy="0.0" ixz="-8e-06" iyy="4.3e-05" iyz="0.0" izz="3.2e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_pitch_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="elbow_pitch_l_joint" type="revolute">
+    <origin xyz="0.015 0 -0.08" rpy="0 0 0" />
+    <parent link="shoulder_yaw_l_link" />
+    <child link="elbow_pitch_l_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.6179938779914944" upper="0.2617993877991494" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="elbow_yaw_l_link">
+    <inertial>
+      <origin xyz="2.1e-05 7.8e-05 -0.032027" rpy="0 0 0" />
+      <mass value="0.043144" />
+      <inertia ixx="1.7e-05" ixy="0.0" ixz="0.0" iyy="1.7e-05" iyz="0.0" izz="1e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_yaw_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_yaw_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="elbow_yaw_l_joint" type="revolute">
+    <origin xyz="-0.015 0 -0.0567" rpy="0 0 0" />
+    <parent link="elbow_pitch_l_link" />
+    <child link="elbow_yaw_l_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="wrist_pitch_l_link">
+    <inertial>
+      <origin xyz="9.3e-05 -4e-05 -0.033114" rpy="0 0 0" />
+      <mass value="0.054009" />
+      <inertia ixx="4e-05" ixy="0.0" ixz="0.0" iyy="3.5e-05" iyz="0.0" izz="1.8e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_pitch_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_pitch_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_pitch_l_joint" type="revolute">
+    <origin xyz="0 0 -0.0433" rpy="0 0 0" />
+    <parent link="elbow_yaw_l_link" />
+    <child link="wrist_pitch_l_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="wrist_roll_l_link">
+    <inertial>
+      <origin xyz="0.005776 -0.007502 -0.052596" rpy="0 0 0" />
+      <mass value="0.066999" />
+      <inertia ixx="7.4e-05" ixy="1e-06" ixz="5e-06" iyy="8.1e-05" iyz="-9e-06" izz="3.9e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_roll_l_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_roll_l_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_roll_l_joint" type="revolute">
+    <origin xyz="0 0 -0.05" rpy="0 -0.00041587 0" />
+    <parent link="wrist_pitch_l_link" />
+    <child link="wrist_roll_l_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.0943951023931953" upper="2.0943951023931953" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_pitch_r_link">
+    <inertial>
+      <origin xyz="-0.000303 -0.040626 -0.000143" rpy="0 0 0" />
+      <mass value="0.11577" />
+      <inertia ixx="4.8e-05" ixy="0.0" ixz="0.0" iyy="2.8e-05" iyz="0.0" izz="4.9e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_pitch_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_pitch_r_joint" type="revolute">
+    <origin xyz="0 -0.076852 0.13628" rpy="-0.087266 0 0" />
+    <parent link="waist_yaw_link" />
+    <child link="shoulder_pitch_r_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_roll_r_link">
+    <inertial>
+      <origin xyz="-0.00208 0.0 -0.041542" rpy="0 0 0" />
+      <mass value="0.078102" />
+      <inertia ixx="6.6e-05" ixy="0.0" ixz="-2e-06" iyy="8.5e-05" iyz="0.0" izz="4.1e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_roll_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_roll_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_roll_r_joint" type="revolute">
+    <origin xyz="0 -0.0545 0" rpy="0.087266 0 0" />
+    <parent link="shoulder_pitch_r_link" />
+    <child link="shoulder_roll_r_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.6179938779914944" upper="0.2617993877991494" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="shoulder_yaw_r_link">
+    <inertial>
+      <origin xyz="0.006229 8.1e-05 -0.057357" rpy="0 0 0" />
+      <mass value="0.056269" />
+      <inertia ixx="4.6e-05" ixy="0.0" ixz="8e-06" iyy="4.9e-05" iyz="0.0" izz="1.6e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_yaw_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/shoulder_yaw_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="shoulder_yaw_r_joint" type="revolute">
+    <origin xyz="0 0 -0.07" rpy="0 0 0" />
+    <parent link="shoulder_roll_r_link" />
+    <child link="shoulder_yaw_r_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="elbow_pitch_r_link">
+    <inertial>
+      <origin xyz="0.059758 5e-06 -0.032379" rpy="0 0 0" />
+      <mass value="0.059758" />
+      <inertia ixx="3.4e-05" ixy="0.0" ixz="-8e-06" iyy="3.9e-05" iyz="0.0" izz="2.8e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_pitch_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="elbow_pitch_r_joint" type="revolute">
+    <origin xyz="0.015 0 -0.08" rpy="0 0 0" />
+    <parent link="shoulder_yaw_r_link" />
+    <child link="elbow_pitch_r_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-2.6179938779914944" upper="0.2617993877991494" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="elbow_yaw_r_link">
+    <inertial>
+      <origin xyz="2.1e-05 -7.8e-05 -0.032027" rpy="0 0 0" />
+      <mass value="0.043144" />
+      <inertia ixx="1.3e-05" ixy="0.0" ixz="0.0" iyy="1.3e-05" iyz="0.0" izz="7e-06" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_yaw_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/elbow_yaw_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="elbow_yaw_r_joint" type="revolute">
+    <origin xyz="-0.015 0 -0.0567" rpy="0 0 0" />
+    <parent link="elbow_pitch_r_link" />
+    <child link="elbow_yaw_r_link" />
+    <axis xyz="0 0 1" />
+    <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="wrist_pitch_r_link">
+    <inertial>
+      <origin xyz="9.2e-05 4e-05 -0.033114" rpy="0 0 0" />
+      <mass value="0.054007" />
+      <inertia ixx="3.7e-05" ixy="0.0" ixz="0.0" iyy="3e-05" iyz="0.0" izz="1.6e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_pitch_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_pitch_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_pitch_r_joint" type="revolute">
+    <origin xyz="0 0 -0.0433" rpy="0 0 0" />
+    <parent link="elbow_yaw_r_link" />
+    <child link="wrist_pitch_r_link" />
+    <axis xyz="0 1 0" />
+    <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="0.0" velocity="0.0" />
+  </joint>
+  <link name="wrist_roll_r_link">
+    <inertial>
+      <origin xyz="0.005776 0.007504 -0.052597" rpy="0 0 0" />
+      <mass value="0.066996" />
+      <inertia ixx="7.4e-05" ixy="-1e-06" ixz="5e-06" iyy="8.1e-05" iyz="9e-06" izz="3.9e-05" />
+    </inertial>
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_roll_r_link.STL" />
+      </geometry>
+      <material name="">
+        <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+      <geometry>
+        <mesh filename="package://servoarm/meshes/wrist_roll_r_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint name="wrist_roll_r_joint" type="revolute">
+    <origin xyz="0 0 -0.05" rpy="0 -0.00041587 0" />
+    <parent link="wrist_pitch_r_link" />
+    <child link="wrist_roll_r_link" />
+    <axis xyz="1 0 0" />
+    <limit lower="-2.0943951023931953" upper="2.0943951023931953" effort="0.0" velocity="0.0" />
+  </joint>
+</robot>
