@@ -18,7 +18,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/base.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/base.STL" />
       </geometry>
     </collision>
   </link>
@@ -40,7 +40,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/first_leg_pitch_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/first_leg_pitch_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -49,7 +49,7 @@
     <parent link="base" />
     <child link="first_leg_pitch_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.41887902047863906" upper="1.0471975511965976" effort="332.0" velocity="3.9269908169872414" />
+    <limit lower="-0.41887902047863906" upper="0.9075712110370514" effort="332.0" velocity="3.9269908169872414" />
   </joint>
   <link name="second_leg_pitch_link">
     <inertial>
@@ -69,7 +69,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/second_leg_pitch_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/second_leg_pitch_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -78,7 +78,7 @@
     <parent link="first_leg_pitch_link" />
     <child link="second_leg_pitch_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-0.5061454830783556" upper="1.7453292519943295" effort="332.0" velocity="3.9269908169872414" />
+    <limit lower="-1.7453292519943295" upper="0.5061454830783556" effort="332.0" velocity="3.9269908169872414" />
   </joint>
   <link name="waist_pitch_link">
     <inertial>
@@ -98,7 +98,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/waist_pitch_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/waist_pitch_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -107,9 +107,9 @@
     <parent link="second_leg_pitch_link" />
     <child link="waist_pitch_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-2.0943951023931953" upper="0.7853981633974483" effort="332.0" velocity="3.9269908169872414" />
+    <limit lower="-0.7853981633974483" upper="2.0943951023931953" effort="332.0" velocity="3.9269908169872414" />
   </joint>
-  <link name="body_yaw_link">
+  <link name="waist_yaw_link">
     <inertial>
       <origin xyz="0.009196 -0.000592 0.251379" rpy="0 0 0" />
       <mass value="13.795395" />
@@ -118,7 +118,7 @@
     <visual>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/body_yaw_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes/waist_yaw_link.STL" />
       </geometry>
       <material name="">
         <color rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
@@ -127,14 +127,14 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/body_yaw_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/waist_yaw_link.STL" />
       </geometry>
     </collision>
   </link>
-  <joint name="body_yaw_joint" type="revolute">
+  <joint name="waist_yaw_joint" type="revolute">
     <origin xyz="0 0 0.07" rpy="0 0 0" />
     <parent link="waist_pitch_link" />
-    <child link="body_yaw_link" />
+    <child link="waist_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-2.9670597283903604" upper="3.141592653589793" effort="143.0" velocity="4.71238898038469" />
   </joint>
@@ -156,13 +156,13 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/head_yaw_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/head_yaw_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="head_yaw_joint" type="revolute">
     <origin xyz="-0.002 0 0.56508" rpy="0 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="head_yaw_link" />
     <axis xyz="0 0 1" />
     <limit lower="-1.5707963267948966" upper="1.5707963267948966" effort="6.3" velocity="7.5398223686155035" />
@@ -185,7 +185,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/head_pitch_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/head_pitch_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -214,7 +214,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/head_roll_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/head_roll_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -243,7 +243,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/camera_head_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/camera_head_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -271,13 +271,13 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_pitch_l_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="shoulder_pitch_l_joint" type="revolute">
     <origin xyz="0 0.14539 0.37721" rpy="0.087266 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="shoulder_pitch_l_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="91.0" velocity="9.215338450530059" />
@@ -300,7 +300,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_roll_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -309,7 +309,7 @@
     <parent link="shoulder_pitch_l_link" />
     <child link="shoulder_roll_l_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.0471975511965976" upper="1.8325957145940461" effort="95.0" velocity="3.979350694547071" />
+    <limit lower="-0.2617993877991494" upper="2.6179938779914944" effort="95.0" velocity="3.979350694547071" />
   </joint>
   <link name="shoulder_yaw_l_link">
     <inertial>
@@ -329,7 +329,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_yaw_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -358,7 +358,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/elbow_pitch_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -387,7 +387,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/elbow_yaw_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -416,7 +416,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/wrist_pitch_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -425,7 +425,7 @@
     <parent link="elbow_yaw_l_link" />
     <child link="wrist_pitch_l_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="wrist_roll_l_link">
     <inertial>
@@ -445,7 +445,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_l_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/wrist_roll_l_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -454,7 +454,7 @@
     <parent link="wrist_pitch_l_link" />
     <child link="wrist_roll_l_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.0471975511965976" upper="0.7853981633974483" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-1.6580627893946132" upper="1.3089969389957472" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="left_tcp_link">
     <inertial>
@@ -474,7 +474,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/left_tcp_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/left_tcp_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -502,13 +502,13 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_pitch_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_pitch_r_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint name="shoulder_pitch_r_joint" type="revolute">
     <origin xyz="0 -0.14539 0.37721" rpy="-0.087266 0 0" />
-    <parent link="body_yaw_link" />
+    <parent link="waist_yaw_link" />
     <child link="shoulder_pitch_r_link" />
     <axis xyz="0 1 0" />
     <limit lower="-2.9670597283903604" upper="2.9670597283903604" effort="91.0" velocity="9.215338450530059" />
@@ -531,7 +531,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_roll_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_roll_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -540,7 +540,7 @@
     <parent link="shoulder_pitch_r_link" />
     <child link="shoulder_roll_r_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-1.8325957145940461" upper="1.0471975511965976" effort="95.0" velocity="3.979350694547071" />
+    <limit lower="-2.6179938779914944" upper="0.2617993877991494" effort="95.0" velocity="3.979350694547071" />
   </joint>
   <link name="shoulder_yaw_r_link">
     <inertial>
@@ -560,7 +560,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/shoulder_yaw_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/shoulder_yaw_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -589,7 +589,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/elbow_pitch_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/elbow_pitch_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -618,7 +618,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/elbow_yaw_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/elbow_yaw_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -647,7 +647,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/wrist_pitch_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/wrist_pitch_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -656,7 +656,7 @@
     <parent link="elbow_yaw_r_link" />
     <child link="wrist_pitch_r_link" />
     <axis xyz="0 1 0" />
-    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="wrist_roll_r_link">
     <inertial>
@@ -676,7 +676,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/wrist_roll_r_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/wrist_roll_r_link.STL" />
       </geometry>
     </collision>
   </link>
@@ -685,7 +685,7 @@
     <parent link="wrist_pitch_r_link" />
     <child link="wrist_roll_r_link" />
     <axis xyz="1 0 0" />
-    <limit lower="-0.7853981633974483" upper="1.0471975511965976" effort="6.3" velocity="7.5398223686155035" />
+    <limit lower="-1.3089969389957472" upper="1.6580627893946132" effort="6.3" velocity="7.5398223686155035" />
   </joint>
   <link name="right_tcp_link">
     <inertial>
@@ -705,7 +705,7 @@
     <collision>
       <origin xyz="0 0 0" rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://tianyi2_urdf/meshes/right_tcp_link.STL" />
+        <mesh filename="package://tianyi2_urdf/meshes_convex/right_tcp_link.STL" />
       </geometry>
     </collision>
   </link>

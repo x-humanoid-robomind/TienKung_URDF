@@ -25,7 +25,7 @@ endif()
 
 
 install(
-  DIRECTORY launch urdf meshes config
+  DIRECTORY launch urdf meshes meshes_convex config
   DESTINATION share/${PROJECT_NAME}
 )
 

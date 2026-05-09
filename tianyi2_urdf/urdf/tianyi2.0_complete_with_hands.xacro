@@ -18,7 +18,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/L_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/L_base_link.STL" /></geometry>
       </collision>
     </link>
 
@@ -36,7 +36,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_thumb_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_1_joint" type="revolute">
@@ -61,7 +61,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_thumb_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_2_joint" type="revolute">
@@ -86,7 +86,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_thumb_3.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_3_joint" type="revolute">
@@ -112,7 +112,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_thumb_4.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_thumb_4_joint" type="revolute">
@@ -138,7 +138,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_index_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_index_1_joint" type="revolute">
@@ -163,7 +163,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_index_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_index_2_joint" type="revolute">
@@ -189,7 +189,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_middle_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_middle_1_joint" type="revolute">
@@ -214,7 +214,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_middle_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_middle_2_joint" type="revolute">
@@ -240,7 +240,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_ring_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_ring_1_joint" type="revolute">
@@ -266,7 +266,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_ring_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_ring_2_joint" type="revolute">
@@ -292,7 +292,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_little_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_little_1_joint" type="revolute">
@@ -317,7 +317,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/left_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/left_little_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="left_little_2_joint" type="revolute">
@@ -352,7 +352,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/R_base_link.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/R_base_link.STL" /></geometry>
       </collision>
     </link>
 
@@ -370,7 +370,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_thumb_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_1_joint" type="revolute">
@@ -395,7 +395,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_thumb_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_2_joint" type="revolute">
@@ -420,7 +420,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_3.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_thumb_3.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_3_joint" type="revolute">
@@ -446,7 +446,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_thumb_4.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_thumb_4.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_thumb_4_joint" type="revolute">
@@ -472,7 +472,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_index_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_index_1_joint" type="revolute">
@@ -497,7 +497,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_index_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_index_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_index_2_joint" type="revolute">
@@ -523,7 +523,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_middle_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_middle_1_joint" type="revolute">
@@ -548,7 +548,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_middle_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_middle_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_middle_2_joint" type="revolute">
@@ -574,7 +574,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_ring_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_ring_1_joint" type="revolute">
@@ -599,7 +599,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_ring_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_ring_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_ring_2_joint" type="revolute">
@@ -625,7 +625,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_1.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_little_1.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_little_1_joint" type="revolute">
@@ -650,7 +650,7 @@
       </visual>
       <collision>
         <origin xyz="0 0 0" rpy="0 0 0" />
-        <geometry><mesh filename="package://tianyi2_urdf/meshes/right_little_2.STL" /></geometry>
+        <geometry><mesh filename="package://tianyi2_urdf/meshes_convex/right_little_2.STL" /></geometry>
       </collision>
     </link>
     <joint name="right_little_2_joint" type="revolute">
