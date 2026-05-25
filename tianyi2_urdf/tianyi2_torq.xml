@@ -1,0 +1,313 @@
+<mujoco model="tianyi2_urdf">
+  <default>
+    <default class="robot">
+      <default class="motor_332">
+        <joint armature="0.5" damping="1" frictionloss="0.3" actuatorfrcrange="-500 500" />
+        <motor ctrlrange="-500.0 500.0" />
+      </default>
+      <default class="motor_91">
+        <joint armature="0.5" damping="1" frictionloss="0.3" actuatorfrcrange="-200 200" />
+        <motor ctrlrange="-200 200.0" />
+      </default>
+      <default class="motor_6_3">
+        <joint armature="0.1" damping="1" frictionloss="0.3" actuatorfrcrange="-20 20" />
+        <motor ctrlrange="-20 20.0" />
+      </default>
+      <default class="motor_95">
+        <joint armature="0.5" damping="1" frictionloss="0.3" actuatorfrcrange="-200 200" />
+        <motor ctrlrange="-200 200.0" />
+      </default>
+      <default class="motor_24">
+        <joint armature="0.5" damping="1" frictionloss="0.3" actuatorfrcrange="-100 100" />
+        <motor ctrlrange="-100 100.0" />
+      </default>
+      <default class="motor_35">
+        <joint armature="0.5" damping="1" frictionloss="0.3" actuatorfrcrange="-35.0 35.0" />
+        <motor ctrlrange="-35.0 35.0" />
+      </default>
+      <default class="motor_143">
+        <joint frictionloss="0.5" damping="1.0" actuatorfrcrange="-143.0 143.0" />
+        <motor ctrlrange="-143.0 143.0" />
+      </default>
+      <default class="visual">
+        <geom material="visualgeom" contype="0" conaffinity="0" group="2" />
+      </default>
+      <default class="collision">
+        <geom material="collision_material" condim="3" contype="1" conaffinity="1" priority="1" group="1" solref="0.005 1" solimp="0.99 0.999 1e-05" friction="1 0.01 0.01" />
+      </default>
+    </default>
+  </default>
+
+  <compiler angle="radian" />
+
+  <visual>
+    <headlight diffuse="0.3 0.3 0.3" ambient="0.2 0.2 0.2" specular="0.1 0.1 0.1" />
+    <rgba haze="0.15 0.25 0.35 1" />
+    <global azimuth="120" elevation="-20" />
+    <quality shadowsize="4096" />
+    <map znear="0.01" zfar="50" />
+  </visual>
+
+  <asset>
+    <texture name="grid_tex" type="2d" builtin="checker" rgb1="0.9 0.9 0.92" rgb2="0.75 0.75 0.78" width="512" height="512" mark="edge" markrgb="0.6 0.6 0.63" />
+    <texture name="skybox_tex" type="skybox" builtin="gradient" rgb1="0.4 0.6 0.8" rgb2="0.95 0.95 1.0" width="800" height="800" />
+    <material name="floor_mat" texture="grid_tex" texrepeat="8 8" texuniform="true" reflectance="0.15" specular="0.3" shininess="0.5" />
+    <material name="base_material" rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+    <material name="default_material" rgba="0.7 0.7 0.7 1" />
+    <material name="collision_material" rgba="0.5 0.5 0.5 0.9" />
+    <mesh name="base.STL" file="./meshes_convex/base.STL" />
+    <mesh name="first_leg_pitch_link.STL" file="./meshes_convex/first_leg_pitch_link.STL" />
+    <mesh name="second_leg_pitch_link.STL" file="./meshes_convex/second_leg_pitch_link.STL" />
+    <mesh name="waist_pitch_link.STL" file="./meshes_convex/waist_pitch_link.STL" />
+    <mesh name="waist_yaw_link.STL" file="./meshes_convex/waist_yaw_link.STL" />
+    <mesh name="head_yaw_link.STL" file="./meshes_convex/head_yaw_link.STL" />
+    <mesh name="head_pitch_link.STL" file="./meshes_convex/head_pitch_link.STL" />
+    <mesh name="head_roll_link.STL" file="./meshes_convex/head_roll_link.STL" />
+    <mesh name="camera_head_link.STL" file="./meshes_convex/camera_head_link.STL" />
+    <mesh name="shoulder_pitch_l_link.STL" file="./meshes_convex/shoulder_pitch_l_link.STL" />
+    <mesh name="shoulder_roll_l_link.STL" file="./meshes_convex/shoulder_roll_l_link.STL" />
+    <mesh name="shoulder_yaw_l_link.STL" file="./meshes_convex/shoulder_yaw_l_link.STL" />
+    <mesh name="elbow_pitch_l_link.STL" file="./meshes_convex/elbow_pitch_l_link.STL" />
+    <mesh name="elbow_yaw_l_link.STL" file="./meshes_convex/elbow_yaw_l_link.STL" />
+    <mesh name="wrist_pitch_l_link.STL" file="./meshes_convex/wrist_pitch_l_link.STL" />
+    <mesh name="wrist_roll_l_link.STL" file="./meshes_convex/wrist_roll_l_link.STL" />
+    <mesh name="left_tcp_link.STL" file="./meshes_convex/left_tcp_link.STL" />
+    <mesh name="shoulder_pitch_r_link.STL" file="./meshes_convex/shoulder_pitch_r_link.STL" />
+    <mesh name="shoulder_roll_r_link.STL" file="./meshes_convex/shoulder_roll_r_link.STL" />
+    <mesh name="shoulder_yaw_r_link.STL" file="./meshes_convex/shoulder_yaw_r_link.STL" />
+    <mesh name="elbow_pitch_r_link.STL" file="./meshes_convex/elbow_pitch_r_link.STL" />
+    <mesh name="elbow_yaw_r_link.STL" file="./meshes_convex/elbow_yaw_r_link.STL" />
+    <mesh name="wrist_pitch_r_link.STL" file="./meshes_convex/wrist_pitch_r_link.STL" />
+    <mesh name="wrist_roll_r_link.STL" file="./meshes_convex/wrist_roll_r_link.STL" />
+    <mesh name="right_tcp_link.STL" file="./meshes_convex/right_tcp_link.STL" />
+  </asset>
+
+  <worldbody>
+    <!-- 灯光 -->
+    <light name="top_light" pos="0 0 4" dir="0 0 -1" diffuse="0.6 0.6 0.6" specular="0.3 0.3 0.3" directional="true" castshadow="true" />
+    <light name="front_light" pos="2 2 3" dir="-0.4 -0.4 -0.8" diffuse="0.4 0.4 0.45" specular="0.2 0.2 0.2" directional="false" castshadow="true" />
+    <light name="back_light" pos="-2 -2 3" dir="0.4 0.4 -0.8" diffuse="0.25 0.25 0.3" specular="0.1 0.1 0.1" directional="false" castshadow="false" />
+
+    <!-- 地板 -->
+    <geom name="floor" type="plane" size="10 10 0.1" pos="0 0 0" quat="1 0 0 0" material="floor_mat" friction="1 0.005 0.0001" condim="3" />
+
+    <body name="base" pos="0.00000000 0.00000000 0.00000000" quat="1 0 0 0" childclass="robot">
+      <!-- <freejoint name="floating_base" /> -->
+      <inertial pos="-0.00067 -0.002625 0.150395" quat="1.0 0.0 0.0 0.0" mass="47.555667" diaginertia="1.277779 1.293166 1.385346" />
+      <geom name="base_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="base.STL" class="collision" />
+      <geom name="base_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="base.STL" class="visual" />
+      <body name="first_leg_pitch_link" pos="0.049182 0 0.37" quat="1.0 0.0 0.0 0.0">
+        <joint name="first_leg_pitch_joint" type="hinge" ref="0.0" class="motor_332" range="-0.41887902047863906 0.9075712110370514" axis="0 1 0" />
+        <inertial pos="-0.105847 -0.000632 0.041305" quat="1.0 0.0 0.0 0.0" mass="2.460134" diaginertia="0.012918 0.028707 0.027239" />
+        <geom name="first_leg_pitch_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="first_leg_pitch_link.STL" class="collision" />
+        <geom name="first_leg_pitch_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="first_leg_pitch_link.STL" class="visual" />
+        <body name="second_leg_pitch_link" pos="-0.20785 0 0.12" quat="1.0 0.0 0.0 0.0">
+          <joint name="second_leg_pitch_joint" type="hinge" ref="0.0" class="motor_332" range="-1.7453292519943295 0.5061454830783556" axis="0 1 0" />
+          <inertial pos="0.056775 0.000389 0.045258" quat="1.0 0.0 0.0 0.0" mass="2.430846" diaginertia="0.011853 0.025086 0.022169" />
+          <geom name="second_leg_pitch_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="second_leg_pitch_link.STL" class="collision" />
+          <geom name="second_leg_pitch_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="second_leg_pitch_link.STL" class="visual" />
+          <body name="waist_pitch_link" pos="0.20785 0 0.12" quat="1.0 0.0 0.0 0.0">
+            <joint name="waist_pitch_joint" type="hinge" ref="0.0" class="motor_332" range="-0.7853981633974483 2.0943951023931953" axis="0 1 0" />
+            <inertial pos="8e-06 0.012369 0.001276" quat="1.0 0.0 0.0 0.0" mass="3.38238" diaginertia="0.005589 0.006064 0.005334" />
+            <geom name="waist_pitch_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="waist_pitch_link.STL" class="collision" />
+            <geom name="waist_pitch_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="waist_pitch_link.STL" class="visual" />
+            <body name="waist_yaw_link" pos="0 0 0.07" quat="1.0 0.0 0.0 0.0">
+              <joint name="waist_yaw_joint" type="hinge" ref="0.0" class="motor_143" range="-2.9670597283903604 3.141592653589793" axis="0 0 1" />
+              <inertial pos="0.009196 -0.000592 0.251379" quat="1.0 0.0 0.0 0.0" mass="13.795395" diaginertia="0.372395 0.331609 0.127753" />
+              <geom name="waist_yaw_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="waist_yaw_link.STL" class="collision" />
+              <geom name="waist_yaw_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="waist_yaw_link.STL" class="visual" />
+              <body name="head_yaw_link" pos="-0.002 0 0.56508" quat="1.0 0.0 0.0 0.0">
+                <joint name="head_yaw_joint" type="hinge" ref="0.0" class="motor_6_3" range="-1.5707963267948966 1.5707963267948966" axis="0 0 1" />
+                <inertial pos="-0.000202 0.000454 0.007248" quat="1.0 0.0 0.0 0.0" mass="0.088397" diaginertia="9.5e-05 7.6e-05 0.000106" />
+                <geom name="head_yaw_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="head_yaw_link.STL" class="collision" />
+                <geom name="head_yaw_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="head_yaw_link.STL" class="visual" />
+                <body name="head_pitch_link" pos="0.01455 0 0.0304" quat="0.991444821419641 0.0 0.1305264957017392 0.0">
+                  <joint name="head_pitch_joint" type="hinge" ref="0.0" class="motor_6_3" range="-0.4363323129985824 0.4363323129985824" axis="0 1 0" />
+                  <inertial pos="-0.000274 0.004118 2.3e-05" quat="1.0 0.0 0.0 0.0" mass="0.23046" diaginertia="9.2e-05 5.4e-05 9.5e-05" />
+                  <geom name="head_pitch_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="head_pitch_link.STL" class="collision" />
+                  <geom name="head_pitch_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="head_pitch_link.STL" class="visual" />
+                  <body name="head_roll_link" pos="0 0 0" quat="1.0 0.0 0.0 0.0">
+                    <joint name="head_roll_joint" type="hinge" ref="0.0" class="motor_6_3" range="-0.4537856055185257 0.4537856055185257" axis="1 0 0" />
+                    <inertial pos="0.022467 0.001208 0.053952" quat="1.0 0.0 0.0 0.0" mass="0.844627" diaginertia="0.00235 0.003365 0.002875" />
+                    <geom name="head_roll_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="head_roll_link.STL" class="collision" />
+                    <geom name="head_roll_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="head_roll_link.STL" class="visual" />
+                    <body name="camera_head_link" pos="0.075288 0.010935 0.07441" quat="0.4304573419693023 -0.5609854188320508 0.5609874794503387 -0.43045892313031153">
+                      <inertial pos="0.010986 -0.000307 -0.016475" quat="1.0 0.0 0.0 0.0" mass="0.1" diaginertia="1.6e-05 8e-05 7.7e-05" />
+                      <geom name="camera_head_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="camera_head_link.STL" class="collision" />
+                      <geom name="camera_head_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="camera_head_link.STL" class="visual" />
+                    </body>
+                  </body>
+                </body>
+              </body>
+              <body name="shoulder_pitch_l_link" pos="0 0.14539 0.37721" quat="0.9990482316709891 0.0436191562856228 0.0 0.0">
+                <joint name="shoulder_pitch_l_joint" type="hinge" ref="0.0" class="motor_91" range="-2.9670597283903604 2.9670597283903604" axis="0 1 0" />
+                <inertial pos="0.007494 0.064184 -2e-05" quat="1.0 0.0 0.0 0.0" mass="1.032698" diaginertia="0.001025 0.001078 0.001247" />
+                <geom name="shoulder_pitch_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_pitch_l_link.STL" class="collision" />
+                <geom name="shoulder_pitch_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_pitch_l_link.STL" class="visual" />
+                <body name="shoulder_roll_l_link" pos="0 0.068 0" quat="1.0 0.0 0.0 0.0">
+                  <joint name="shoulder_roll_l_joint" type="hinge" ref="0.0" class="motor_95" range="-0.2617993877991494 2.6179938779914944" axis="1 0 0" />
+                  <inertial pos="0.002389 0.002259 -0.048236" quat="1.0 0.0 0.0 0.0" mass="0.440997" diaginertia="0.001001 0.001313 0.000911" />
+                  <geom name="shoulder_roll_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_roll_l_link.STL" class="collision" />
+                  <geom name="shoulder_roll_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_roll_l_link.STL" class="visual" />
+                  <body name="shoulder_yaw_l_link" pos="0 0 -0.1025" quat="1.0 0.0 0.0 0.0">
+                    <joint name="shoulder_yaw_l_joint" type="hinge" ref="0.0" class="motor_35" range="-2.9670597283903604 2.9670597283903604" axis="0 0 1" />
+                    <inertial pos="0.008319 0.002686 -0.112525" quat="1.0 0.0 0.0 0.0" mass="1.365033" diaginertia="0.009637 0.0096 0.001331" />
+                    <geom name="shoulder_yaw_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_yaw_l_link.STL" class="collision" />
+                    <geom name="shoulder_yaw_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_yaw_l_link.STL" class="visual" />
+                    <body name="elbow_pitch_l_link" pos="0.02 0 -0.1975" quat="1.0 0.0 0.0 0.0">
+                      <joint name="elbow_pitch_l_joint" type="hinge" ref="0.0" class="motor_35" range="-2.6179938779914944 0.2617993877991494" axis="0 1 0" />
+                      <inertial pos="-0.014694 -7.2e-05 -0.026081" quat="1.0 0.0 0.0 0.0" mass="0.246311" diaginertia="0.000381 0.000222 0.000401" />
+                      <geom name="elbow_pitch_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="elbow_pitch_l_link.STL" class="collision" />
+                      <geom name="elbow_pitch_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="elbow_pitch_l_link.STL" class="visual" />
+                      <body name="elbow_yaw_l_link" pos="-0.02 0 -0.0543" quat="1.0 0.0 0.0 0.0">
+                        <joint name="elbow_yaw_l_joint" type="hinge" ref="0.0" class="motor_24" range="-2.9670597283903604 2.9670597283903604" axis="0 0 1" />
+                        <inertial pos="0.000158 0.001503 -0.069535" quat="1.0 0.0 0.0 0.0" mass="0.986828" diaginertia="0.003108 0.003035 0.00058" />
+                        <geom name="elbow_yaw_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="elbow_yaw_l_link.STL" class="collision" />
+                        <geom name="elbow_yaw_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="elbow_yaw_l_link.STL" class="visual" />
+                        <body name="wrist_pitch_l_link" pos="0 0.002 -0.1887" quat="1.0 0.0 0.0 0.0">
+                          <joint name="wrist_pitch_l_joint" type="hinge" ref="0.0" class="motor_6_3" range="-0.7853981633974483 1.0471975511965976" axis="0 1 0" />
+                          <inertial pos="0.005362 0.00064 -0.018812" quat="1.0 0.0 0.0 0.0" mass="0.262007" diaginertia="7.1e-05 0.000112 0.000111" />
+                          <geom name="wrist_pitch_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="wrist_pitch_l_link.STL" class="collision" />
+                          <geom name="wrist_pitch_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="wrist_pitch_l_link.STL" class="visual" />
+                          <body name="wrist_roll_l_link" pos="5.0485E-05 0 -0.02" quat="1.0 0.0 0.0 0.0">
+                            <joint name="wrist_roll_l_joint" type="hinge" ref="0.0" class="motor_6_3" range="-1.6580627893946132 1.3089969389957472" axis="1 0 0" />
+                            <inertial pos="0.000801 8.4e-05 -0.029302" quat="1.0 0.0 0.0 0.0" mass="0.131751" diaginertia="6.9e-05 0.000116 0.00011" />
+                            <geom name="wrist_roll_l_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="wrist_roll_l_link.STL" class="collision" />
+                            <geom name="wrist_roll_l_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="wrist_roll_l_link.STL" class="visual" />
+                            <body name="left_tcp_link" pos="0 3.5454E-05 -0.084799" quat="1.0 0.0 0.0 0.0">
+                              <inertial pos="0.000238 0.000502 0.021714" quat="1.0 0.0 0.0 0.0" mass="0.252604" diaginertia="0.000124 0.000119 0.000132" />
+                              <geom name="left_tcp_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="left_tcp_link.STL" class="collision" />
+                              <geom name="left_tcp_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="left_tcp_link.STL" class="visual" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+              <body name="shoulder_pitch_r_link" pos="0 -0.14539 0.37721" quat="0.9990482316709891 -0.0436191562856228 0.0 0.0">
+                <joint name="shoulder_pitch_r_joint" type="hinge" ref="0.0" class="motor_91" range="-2.9670597283903604 2.9670597283903604" axis="0 1 0" />
+                <inertial pos="0.007494 -0.064184 -2e-05" quat="1.0 0.0 0.0 0.0" mass="1.032698" diaginertia="0.001025 0.001078 0.001247" />
+                <geom name="shoulder_pitch_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_pitch_r_link.STL" class="collision" />
+                <geom name="shoulder_pitch_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_pitch_r_link.STL" class="visual" />
+                <body name="shoulder_roll_r_link" pos="0 -0.068 0" quat="1.0 0.0 0.0 0.0">
+                  <joint name="shoulder_roll_r_joint" type="hinge" ref="0.0" class="motor_95" range="-2.6179938779914944 0.2617993877991494" axis="1 0 0" />
+                  <inertial pos="0.002389 -0.002259 -0.048236" quat="1.0 0.0 0.0 0.0" mass="0.440997" diaginertia="0.001001 0.001313 0.000911" />
+                  <geom name="shoulder_roll_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_roll_r_link.STL" class="collision" />
+                  <geom name="shoulder_roll_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_roll_r_link.STL" class="visual" />
+                  <body name="shoulder_yaw_r_link" pos="0 0 -0.1025" quat="1.0 0.0 0.0 0.0">
+                    <joint name="shoulder_yaw_r_joint" type="hinge" ref="0.0" class="motor_35" range="-2.9670597283903604 2.9670597283903604" axis="0 0 1" />
+                    <inertial pos="0.008319 -0.002686 -0.112525" quat="1.0 0.0 0.0 0.0" mass="1.365033" diaginertia="0.009637 0.0096 0.001331" />
+                    <geom name="shoulder_yaw_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="shoulder_yaw_r_link.STL" class="collision" />
+                    <geom name="shoulder_yaw_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="shoulder_yaw_r_link.STL" class="visual" />
+                    <body name="elbow_pitch_r_link" pos="0.02 0 -0.1975" quat="1.0 0.0 0.0 0.0">
+                      <joint name="elbow_pitch_r_joint" type="hinge" ref="0.0" class="motor_35" range="-2.6179938779914944 0.2617993877991494" axis="0 1 0" />
+                      <inertial pos="-0.014694 7.2e-05 -0.026081" quat="1.0 0.0 0.0 0.0" mass="0.246311" diaginertia="0.000381 0.000222 0.000401" />
+                      <geom name="elbow_pitch_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="elbow_pitch_r_link.STL" class="collision" />
+                      <geom name="elbow_pitch_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="elbow_pitch_r_link.STL" class="visual" />
+                      <body name="elbow_yaw_r_link" pos="-0.02 0 -0.0543" quat="1.0 0.0 0.0 0.0">
+                        <joint name="elbow_yaw_r_joint" type="hinge" ref="0.0" class="motor_24" range="-2.9670597283903604 2.9670597283903604" axis="0 0 1" />
+                        <inertial pos="0.000158 -0.001503 -0.069535" quat="1.0 0.0 0.0 0.0" mass="0.986828" diaginertia="0.003108 0.003035 0.00058" />
+                        <geom name="elbow_yaw_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="elbow_yaw_r_link.STL" class="collision" />
+                        <geom name="elbow_yaw_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="elbow_yaw_r_link.STL" class="visual" />
+                        <body name="wrist_pitch_r_link" pos="0 -0.002 -0.1887" quat="1.0 0.0 0.0 0.0">
+                          <joint name="wrist_pitch_r_joint" type="hinge" ref="0.0" class="motor_6_3" range="-0.7853981633974483 1.0471975511965976" axis="0 1 0" />
+                          <inertial pos="0.005362 -0.00064 -0.018812" quat="1.0 0.0 0.0 0.0" mass="0.262007" diaginertia="7.1e-05 0.000112 0.000111" />
+                          <geom name="wrist_pitch_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="wrist_pitch_r_link.STL" class="collision" />
+                          <geom name="wrist_pitch_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="wrist_pitch_r_link.STL" class="visual" />
+                          <body name="wrist_roll_r_link" pos="5.0485E-05 0 -0.02" quat="1.0 0.0 0.0 0.0">
+                            <joint name="wrist_roll_r_joint" type="hinge" ref="0.0" class="motor_6_3" range="-1.3089969389957472 1.6580627893946132" axis="1 0 0" />
+                            <inertial pos="0.000801 -8.4e-05 -0.029302" quat="1.0 0.0 0.0 0.0" mass="0.131751" diaginertia="6.9e-05 0.000116 0.00011" />
+                            <geom name="wrist_roll_r_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="wrist_roll_r_link.STL" class="collision" />
+                            <geom name="wrist_roll_r_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="wrist_roll_r_link.STL" class="visual" />
+                            <body name="right_tcp_link" pos="0 -3.5405E-05 -0.084799" quat="1.0 0.0 0.0 0.0">
+                              <inertial pos="0.000238 -0.000502 0.021714" quat="1.0 0.0 0.0 0.0" mass="0.252604" diaginertia="0.000124 0.000119 0.000132" />
+                              <geom name="right_tcp_link_collision" pos="0 0 0" quat="1.0 0.0 0.0 0.0" type="mesh" mesh="right_tcp_link.STL" class="collision" />
+                              <geom name="right_tcp_link_visual" pos="0 0 0" quat="1.0 0.0 0.0 0.0" material="base_material" type="mesh" mesh="right_tcp_link.STL" class="visual" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+      <site name="base_site" pos="0 0 0" quat="1 0 0 0" />
+      <camera name="front_camera" mode="track" fovy="90.0" quat="4.329780281177467e-17 4.329780281177466e-17 0.7071067811865475 0.7071067811865476" pos="0.0 2.0 0.5" />
+      <camera name="side_camera" mode="track" fovy="90.0" quat="-0.5 -0.4999999999999999 0.5 0.5000000000000001" pos="-2.0 0.0 0.5" />
+    </body>
+  </worldbody>
+
+  <actuator>
+    <motor name="first_leg_pitch_joint_ctrl" joint="first_leg_pitch_joint" class="motor_332" />
+    <motor name="second_leg_pitch_joint_ctrl" joint="second_leg_pitch_joint" class="motor_332" />
+    <motor name="waist_pitch_joint_ctrl" joint="waist_pitch_joint" class="motor_332" />
+    <motor name="waist_yaw_joint_ctrl" joint="waist_yaw_joint" class="motor_143" />
+    <motor name="head_yaw_joint_ctrl" joint="head_yaw_joint" class="motor_6_3" />
+    <motor name="head_pitch_joint_ctrl" joint="head_pitch_joint" class="motor_6_3" />
+    <motor name="head_roll_joint_ctrl" joint="head_roll_joint" class="motor_6_3" />
+    <motor name="shoulder_pitch_l_joint_ctrl" joint="shoulder_pitch_l_joint" class="motor_91" />
+    <motor name="shoulder_roll_l_joint_ctrl" joint="shoulder_roll_l_joint" class="motor_95" />
+    <motor name="shoulder_yaw_l_joint_ctrl" joint="shoulder_yaw_l_joint" class="motor_35" />
+    <motor name="elbow_pitch_l_joint_ctrl" joint="elbow_pitch_l_joint" class="motor_35" />
+    <motor name="elbow_yaw_l_joint_ctrl" joint="elbow_yaw_l_joint" class="motor_24" />
+    <motor name="wrist_pitch_l_joint_ctrl" joint="wrist_pitch_l_joint" class="motor_6_3" />
+    <motor name="wrist_roll_l_joint_ctrl" joint="wrist_roll_l_joint" class="motor_6_3" />
+    <motor name="shoulder_pitch_r_joint_ctrl" joint="shoulder_pitch_r_joint" class="motor_91" />
+    <motor name="shoulder_roll_r_joint_ctrl" joint="shoulder_roll_r_joint" class="motor_95" />
+    <motor name="shoulder_yaw_r_joint_ctrl" joint="shoulder_yaw_r_joint" class="motor_35" />
+    <motor name="elbow_pitch_r_joint_ctrl" joint="elbow_pitch_r_joint" class="motor_35" />
+    <motor name="elbow_yaw_r_joint_ctrl" joint="elbow_yaw_r_joint" class="motor_24" />
+    <motor name="wrist_pitch_r_joint_ctrl" joint="wrist_pitch_r_joint" class="motor_6_3" />
+    <motor name="wrist_roll_r_joint_ctrl" joint="wrist_roll_r_joint" class="motor_6_3" />
+  </actuator>
+
+  <contact>
+    <exclude body1="base" body2="first_leg_pitch_link" />
+    <exclude body1="first_leg_pitch_link" body2="second_leg_pitch_link" />
+    <exclude body1="second_leg_pitch_link" body2="waist_pitch_link" />
+    <exclude body1="waist_pitch_link" body2="waist_yaw_link" />
+    <exclude body1="waist_yaw_link" body2="head_yaw_link" />
+    <exclude body1="head_yaw_link" body2="head_pitch_link" />
+    <exclude body1="head_pitch_link" body2="head_roll_link" />
+    <exclude body1="head_roll_link" body2="camera_head_link" />
+    <exclude body1="waist_yaw_link" body2="head_roll_link" />
+    <exclude body1="waist_yaw_link" body2="head_pitch_link" />
+    <exclude body1="head_yaw_link" body2="head_roll_link" />
+    <exclude body1="head_yaw_link" body2="camera_head_link" />
+    <exclude body1="head_pitch_link" body2="camera_head_link" />
+    <exclude body1="waist_yaw_link" body2="shoulder_pitch_l_link" />
+    <exclude body1="shoulder_pitch_l_link" body2="shoulder_roll_l_link" />
+    <exclude body1="shoulder_roll_l_link" body2="shoulder_yaw_l_link" />
+    <exclude body1="shoulder_yaw_l_link" body2="elbow_pitch_l_link" />
+    <exclude body1="elbow_pitch_l_link" body2="elbow_yaw_l_link" />
+    <exclude body1="elbow_yaw_l_link" body2="wrist_pitch_l_link" />
+    <exclude body1="elbow_yaw_l_link" body2="wrist_roll_l_link" />
+    <exclude body1="wrist_pitch_l_link" body2="wrist_roll_l_link" />
+    <exclude body1="wrist_pitch_l_link" body2="left_tcp_link" />
+    <exclude body1="wrist_roll_l_link" body2="left_tcp_link" />
+    <exclude body1="waist_yaw_link" body2="shoulder_pitch_r_link" />
+    <exclude body1="shoulder_pitch_r_link" body2="shoulder_roll_r_link" />
+    <exclude body1="shoulder_roll_r_link" body2="shoulder_yaw_r_link" />
+    <exclude body1="shoulder_yaw_r_link" body2="elbow_pitch_r_link" />
+    <exclude body1="elbow_pitch_r_link" body2="elbow_yaw_r_link" />
+    <exclude body1="elbow_yaw_r_link" body2="wrist_pitch_r_link" />
+    <exclude body1="elbow_yaw_r_link" body2="wrist_roll_r_link" />
+    <exclude body1="wrist_pitch_r_link" body2="wrist_roll_r_link" />
+    <exclude body1="wrist_pitch_r_link" body2="right_tcp_link" />
+    <exclude body1="wrist_roll_r_link" body2="right_tcp_link" />
+  </contact>
+
+  <sensor>
+    <framepos name="base_site_pos" objtype="site" objname="base_site" />
+    <framequat name="base_site_quat" objtype="site" objname="base_site" />
+    <framelinvel name="base_site_linvel" objtype="site" objname="base_site" />
+    <frameangvel name="base_site_angvel" objtype="site" objname="base_site" />
+    <velocimeter name="base_site_vel" site="base_site" />
+  </sensor>
+</mujoco>

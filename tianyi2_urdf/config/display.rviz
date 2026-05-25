@@ -71,7 +71,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        body_yaw_link:
+        waist_yaw_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -206,7 +206,7 @@ Visualization Manager:
         All Enabled: true
         base:
           Value: true
-        body_yaw_link:
+        waist_yaw_link:
           Value: true
         camera_head_link:
           Value: true
@@ -264,7 +264,7 @@ Visualization Manager:
           first_leg_pitch_link:
             second_leg_pitch_link:
               waist_pitch_link:
-                body_yaw_link:
+                waist_yaw_link:
                   head_yaw_link:
                     head_pitch_link:
                       head_roll_link:
